@@ -1,4 +1,4 @@
-# CRCJS
+# EASY-CRC
 
 A pure JavaScript and zero dependencies **cyclic redundancy check** (CRC) node module.  
 It supports crc8, crc16 and crc32.
@@ -38,7 +38,7 @@ console.log(checksum.toString(16));// "9d2acc56"
 
 ## Available algorithms
 
-The follow algorithm names **can be passed as first argument** of respective `crc8()`, `crc16()` and `crc32()` methods;
+The follow algorithm names **can be passed as first argument** of respective `crc8()`, `crc16()` and `crc32()` methods.
 
 ### CRC8
 

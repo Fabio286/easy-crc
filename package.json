@@ -1,5 +1,5 @@
 {
-  "name": "crcjs",
+  "name": "easy-crc",
   "version": "0.0.1",
   "description": "A pure JavaScript and zero dependencies CRC node module.",
   "main": "index.js",
