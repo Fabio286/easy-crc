@@ -6,7 +6,7 @@ It supports crc8, crc16 and crc32.
 ## Installation
 
 ```bash
-npm install --save crcjs
+npm install --save easy-crc
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ There are three functions available respectively named `crc8 ()`, `crc16 ()` and
 The first argument is a string with the name of the desired algorithm (below the list), and the second is the data on which you want to calculate crc. Data can be a string or a buffer.
 
 ```js
-const { crc8, crc16, crc32 } = require('crcjs');
+const { crc8, crc16, crc32 } = require('easy-crc');
 
 // CRC8
 let data = '12345';
