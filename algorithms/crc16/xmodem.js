@@ -1,5 +1,5 @@
 module.exports = {
-   init: 0xFFFF,
+   init: 0x0000,
    invertedInit: null,
    xorOut: 0x0000,
    refOut: false,

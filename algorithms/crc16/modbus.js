@@ -1,6 +1,6 @@
 module.exports = {
-   init: 0x0000,
-   invertedInit: null,
+   init: 0xFFFF,
+   invertedInit: 0xFFFF,
    xorOut: 0x0000,
    refOut: true,
    refIn: true,

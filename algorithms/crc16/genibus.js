@@ -1,7 +1,7 @@
 module.exports = {
    init: 0xFFFF,
    invertedInit: null,
-   xorOut: 0x0000,
+   xorOut: 0xFFFF,
    refOut: false,
    refIn: false,
    table: Uint16Array.from([
