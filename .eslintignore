@@ -1,0 +1,6 @@
+/node_modules
+/assets/vendor
+/out
+/dist
+/public
+*.ejs
