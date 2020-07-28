@@ -1,6 +1,6 @@
 # EASY-CRC
 
-![npm](https://img.shields.io/npm/v/easy-crc) ![npm](https://img.shields.io/npm/dt/easy-crc) [![Build Status](https://travis-ci.org/Fabio286/easy-crc.svg?branch=master)](https://travis-ci.org/Fabio286/easy-crc) ![GitHub](https://img.shields.io/github/license/fabio286/easy-crc)
+![npm](https://img.shields.io/npm/v/easy-crc) ![npm](https://img.shields.io/npm/dt/easy-crc) [![Build Status](https://travis-ci.com/Fabio286/easy-crc.svg?branch=master)](https://travis-ci.com/Fabio286/easy-crc) ![GitHub](https://img.shields.io/github/license/fabio286/easy-crc)
 
 A pure JavaScript and zero dependencies **cyclic redundancy check** (CRC) node module.  
 It supports crc8, crc16 and crc32.
@@ -13,7 +13,7 @@ npm install --save easy-crc
 
 ## Usage
 
-There are three functions available respectively named `crc8()`, `crc1()` and `crc32()`. These functions take two arguments.  
+There are three functions available respectively named `crc8()`, `crc16()` and `crc32()`. These functions take two arguments.  
 The first argument is a string with the name of the desired algorithm (below the list), and the second is the data on which you want to calculate crc. Data can be a string or a buffer.
 
 ```js
