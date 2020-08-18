@@ -1,4 +1,4 @@
-// Return values gotten from https://crccalc.com/
+// Return values got from https://crccalc.com/
 
 const chai = require('chai');
 const { crc8 } = require('../index');
