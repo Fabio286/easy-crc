@@ -1,6 +1,6 @@
 # EASY-CRC
 
-![npm](https://img.shields.io/npm/v/easy-crc) ![npm](https://img.shields.io/npm/dt/easy-crc) [![Build Status](https://travis-ci.com/Fabio286/easy-crc.svg?branch=master)](https://travis-ci.com/Fabio286/easy-crc) ![GitHub](https://img.shields.io/github/license/fabio286/easy-crc)
+![npm](https://img.shields.io/npm/v/easy-crc) ![npm](https://img.shields.io/npm/dt/easy-crc) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Ffabio286%2Feasy-crc%2Fbadge&style=flat)](https://actions-badge.atrox.dev/fabio286/easy-crc/goto) ![GitHub](https://img.shields.io/github/license/fabio286/easy-crc)
 
 A pure JavaScript and zero dependencies **cyclic redundancy check** (CRC) node module.  
 It supports crc8, crc16 and crc32.
