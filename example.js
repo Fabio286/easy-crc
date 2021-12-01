@@ -1,4 +1,4 @@
-const { crc8, crc16, crc32 } = require('.');
+const { crc8, crc16, crc32 } = require('easy-crc');
 
 // CRC8
 let data = '12345';

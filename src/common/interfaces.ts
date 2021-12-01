@@ -1,9 +1,10 @@
 export interface Algorithm {
    init: number,
+   invertedInit?: number | null,
    xorOut: number,
    refOut: boolean,
    refIn: boolean,
-   table: Uint8Array
+   table: Uint8Array | Uint16Array | Uint32Array
 }
 
 export interface Crc8Algorithms {
@@ -43,4 +44,16 @@ export interface Crc16Algorithms {
    'X-25': Algorithm,
    XMODEM: Algorithm,
    'CRC-A': Algorithm
+}
+
+export interface Crc32Algorithms {
+   'CRC-32': Algorithm,
+   'CRC-32C': Algorithm,
+   'CRC-32D': Algorithm,
+   'CRC-32Q': Algorithm,
+   BZIP2: Algorithm,
+   JAMCRC: Algorithm,
+   'MPEG-2': Algorithm,
+   POSIX: Algorithm,
+   XFER: Algorithm,
 }
