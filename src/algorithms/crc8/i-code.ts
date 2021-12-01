@@ -1,4 +1,5 @@
-module.exports = {
+import { Algorithm } from "../../common/interfaces";
+export const i_code: Algorithm = {
    init: 0xFD,
    xorOut: 0x00,
    refOut: false,

@@ -1,4 +1,5 @@
-module.exports = {
+import { Algorithm } from "../../common/interfaces";
+export const dvb_s2: Algorithm = {
    init: 0x00,
    xorOut: 0x00,
    refOut: false,

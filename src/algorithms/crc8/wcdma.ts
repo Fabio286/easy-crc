@@ -1,4 +1,5 @@
-module.exports = {
+import { Algorithm } from "../../common/interfaces";
+export const wcdma: Algorithm = {
    init: 0x00,
    xorOut: 0x00,
    refOut: true,

@@ -1,4 +1,5 @@
-module.exports = {
+import { Algorithm } from "../../common/interfaces";
+export const cdma2000: Algorithm = {
    init: 0xFF,
    xorOut: 0x00,
    refOut: false,

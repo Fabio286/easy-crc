@@ -1,6 +1,7 @@
-module.exports = {
-   init: 0x00,
-   xorOut: 0x55,
+import { Algorithm } from "../../common/interfaces";
+export const crc_8: Algorithm = {
+   init: 0x0000,
+   xorOut: 0x0000,
    refOut: false,
    refIn: false,
    table: Uint8Array.from([
