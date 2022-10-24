@@ -28,6 +28,7 @@ const crc8Algorithms: Crc8Algorithms = {
 /**
  * @param {String} algorithm Name of the algorithm
  * @param {String|Buffer} data A string or an array of bytes
+ * @param {Number=} seed A number
  * @returns {Number} CRC8 checksum
  */
 function crc8 (algorithm: keyof Crc8Algorithms, data: string | Buffer, seed?: number) {

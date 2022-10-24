@@ -26,6 +26,7 @@ const crc32Algorithms: Crc32Algorithms = {
 /**
  * @param {String} algorithm Name of the algorithm
  * @param {String|Buffer} data A string or an array of bytes
+ * @param {Number=} seed A number
  * @returns {Number} CRC32 checksum
  */
 function crc32 (algorithm: keyof Crc32Algorithms, data: string | Buffer, seed?: number) {

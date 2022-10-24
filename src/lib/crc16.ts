@@ -54,6 +54,7 @@ const crc16Algorithms: Crc16Algorithms = {
 /**
  * @param {String} algorithm Name of the algorithm
  * @param {String|Buffer} data A string or an array of bytes
+ * @param {Number=} seed A number
  * @returns {Number} CRC16 checksum
  */
 function crc16 (algorithm: keyof Crc16Algorithms, data: string | Buffer, seed?: number) {
