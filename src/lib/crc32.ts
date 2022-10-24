@@ -26,9 +26,10 @@ const crc32Algorithms: Crc32Algorithms = {
 /**
  * @param {String} algorithm Name of the algorithm
  * @param {String|Buffer} data A string or an array of bytes
+ * @param {Number=} seed A number
  * @returns {Number} CRC32 checksum
  */
-function crc32 (algorithm: keyof Crc32Algorithms, data: string | Buffer) {
+function crc32 (algorithm: keyof Crc32Algorithms, data: string | Buffer, seed?: number) {
    const availables = Object.keys(crc32Algorithms);
    if (!availables.includes(algorithm))
       throw new AlgorithmException(algorithm);
@@ -42,7 +43,7 @@ function crc32 (algorithm: keyof Crc32Algorithms, data: string | Buffer) {
       table
    } = crc32Algorithms[algorithm];
 
-   let crc = init;
+   let crc = seed ? (seed ^ xorOut) : init;
 
    if (refOut) {
       for (const b of data)

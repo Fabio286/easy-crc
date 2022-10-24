@@ -54,9 +54,10 @@ const crc16Algorithms: Crc16Algorithms = {
 /**
  * @param {String} algorithm Name of the algorithm
  * @param {String|Buffer} data A string or an array of bytes
+ * @param {Number=} seed A number
  * @returns {Number} CRC16 checksum
  */
-function crc16 (algorithm: keyof Crc16Algorithms, data: string | Buffer) {
+function crc16 (algorithm: keyof Crc16Algorithms, data: string | Buffer, seed?: number) {
    const availables = Object.keys(crc16Algorithms);
    if (!availables.includes(algorithm))
       throw new AlgorithmException(algorithm);
@@ -72,7 +73,7 @@ function crc16 (algorithm: keyof Crc16Algorithms, data: string | Buffer) {
       table
    } = crc16Algorithms[algorithm];
 
-   let crc = refIn ? invertedInit || 0 : init;
+   let crc = seed ? seed ^ xorOut : (refIn ? invertedInit || 0 : init);
    
    if (refOut) {
       for (const b of data)
