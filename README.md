@@ -13,8 +13,9 @@ npm install --save easy-crc
 
 ## Usage
 
-There are three functions available respectively named `crc8()`, `crc16()` and `crc32()`. These functions take two arguments.  
-The first argument is a string with the name of the desired algorithm (below the list), and the second is the data on which you want to calculate crc. Data can be a string or a buffer.
+There are three functions available respectively named `crc8()`, `crc16()` and `crc32()`. These functions take three arguments.  
+The first argument is a string with the name of the desired algorithm (below the list), and the second is the data on which you want to calculate crc. Data can be a string or a buffer.  
+The third parameter is the **CRC seed** and is optional.
 
 ```js
 const { crc8, crc16, crc32 } = require('easy-crc');
