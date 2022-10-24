@@ -43,7 +43,7 @@ function crc8 (algorithm: keyof Crc8Algorithms, data: string | Buffer, seed?: nu
       table
    } = crc8Algorithms[algorithm];
 
-   let crc = seed ?? init;
+   let crc = seed ? seed ^ xorOut : init;
 
    for (const b of data)
       crc = table[crc ^ b];

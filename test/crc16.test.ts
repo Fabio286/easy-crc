@@ -7,16 +7,32 @@ const check = Buffer.from([0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38,
 
 describe('CRC16', function () {
    describe('CCITT-FALSE', function () {
-      it('should return 0x7D61', function (done) {
-         const crcCheck = crc16('CCITT-FALSE', check);
-         crcCheck.should.equal(0x7D61);
+      const algorithm = 'CCITT-FALSE';
+      const expected = 0x7D61;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('ARC', function () {
-      it('should return 0x443D', function (done) {
-         const crcCheck = crc16('ARC', check);
-         crcCheck.should.equal(0x443D);
+      const algorithm = 'ARC';
+      const expected = 0x443D;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
@@ -28,121 +44,257 @@ describe('CRC16', function () {
    //    });
    // });
    describe('CDMA2000', function () {
-      it('should return 0xD89D', function (done) {
-         const crcCheck = crc16('CDMA2000', check);
-         crcCheck.should.equal(0xD89D);
+      const algorithm = 'CDMA2000';
+      const expected = 0xD89D;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('BUYPASS', function () {
-      it('should return 0xFD14', function (done) {
-         const crcCheck = crc16('BUYPASS', check);
-         crcCheck.should.equal(0xFD14);
+      const algorithm = 'BUYPASS';
+      const expected = 0xFD14;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('DDS-110', function () {
-      it('should return 0xDB54', function (done) {
-         const crcCheck = crc16('DDS-110', check);
-         crcCheck.should.equal(0xDB54);
+      const algorithm = 'DDS-110';
+      const expected = 0xDB54;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('DECT-R', function () {
-      it('should return 0x422B', function (done) {
-         const crcCheck = crc16('DECT-R', check);
-         crcCheck.should.equal(0x422B);
+      const algorithm = 'DECT-R';
+      const expected = 0x422B;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('DECT-X', function () {
-      it('should return 0x422A', function (done) {
-         const crcCheck = crc16('DECT-X', check);
-         crcCheck.should.equal(0x422A);
+      const algorithm = 'DECT-X';
+      const expected = 0x422A;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('DNP', function () {
-      it('should return 0x6772', function (done) {
-         const crcCheck = crc16('DNP', check);
-         crcCheck.should.equal(0x6772);
+      const algorithm = 'DNP';
+      const expected = 0x6772;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('EN-13757', function () {
-      it('should return 0xFC73', function (done) {
-         const crcCheck = crc16('EN-13757', check);
-         crcCheck.should.equal(0xFC73);
+      const algorithm = 'EN-13757';
+      const expected = 0xFC73;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('GENIBUS', function () {
-      it('should return 0x829E', function (done) {
-         const crcCheck = crc16('GENIBUS', check);
-         crcCheck.should.equal(0x829E);
+      const algorithm = 'GENIBUS';
+      const expected = 0x829E;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('MAXIM', function () {
-      it('should return 0xBBC2', function (done) {
-         const crcCheck = crc16('MAXIM', check);
-         crcCheck.should.equal(0xBBC2);
+      const algorithm = 'MAXIM';
+      const expected = 0xBBC2;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('KERMIT', function () {
-      it('should return 0x5F6E', function (done) {
-         const crcCheck = crc16('KERMIT', check);
-         crcCheck.should.equal(0x5F6E);
+      const algorithm = 'KERMIT';
+      const expected = 0x5F6E;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('MCRF4XX', function () {
-      it('should return 0xC3E9', function (done) {
-         const crcCheck = crc16('MCRF4XX', check);
-         crcCheck.should.equal(0xC3E9);
+      const algorithm = 'MCRF4XX';
+      const expected = 0xC3E9;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('MODBUS', function () {
-      it('should return 0x434D', function (done) {
-         const crcCheck = crc16('MODBUS', check);
-         crcCheck.should.equal(0x434D);
+      const algorithm = 'MODBUS';
+      const expected = 0x434D;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('RIELLO', function () {
-      it('should return 0x9068', function (done) {
-         const crcCheck = crc16('RIELLO', check);
-         crcCheck.should.equal(0x9068);
+      const algorithm = 'RIELLO';
+      const expected = 0x9068;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('T10-DIF', function () {
-      it('should return 0xDE40', function (done) {
-         const crcCheck = crc16('T10-DIF', check);
-         crcCheck.should.equal(0xDE40);
+      const algorithm = 'T10-DIF';
+      const expected = 0xDE40;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('TELEDISK', function () {
-      it('should return 0x1BBF', function (done) {
-         const crcCheck = crc16('TELEDISK', check);
-         crcCheck.should.equal(0x1BBF);
+      const algorithm = 'TELEDISK';
+      const expected = 0x1BBF;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('TMS37157', function () {
-      it('should return 0xE2A2', function (done) {
-         const crcCheck = crc16('TMS37157', check);
-         crcCheck.should.equal(0xE2A2);
+      const algorithm = 'TMS37157';
+      const expected = 0xE2A2;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('USB', function () {
-      it('should return 0xBCB2', function (done) {
-         const crcCheck = crc16('USB', check);
-         crcCheck.should.equal(0xBCB2);
+      const algorithm = 'USB';
+      const expected = 0xBCB2;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
@@ -152,25 +304,47 @@ describe('CRC16', function () {
          crcCheck.should.equal(0x3C16);
          done();
       });
+      const algorithm = 'X-25';
+      const expected = 0x3C16;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
+         done();
+      });
    });
    describe('XMODEM', function () {
-      it('should return 0x9C58', function (done) {
-         const crcCheck = crc16('XMODEM', check);
-         crcCheck.should.equal(0x9C58);
+      const algorithm = 'XMODEM';
+      const expected = 0x9C58;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
+         done();
+      });
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
    describe('CRC-A', function () {
-      it('should return 0x1194', function (done) {
-         const crcCheck = crc16('CRC-A', check);
-         crcCheck.should.equal(0x1194);
+      const algorithm = 'CRC-A';
+      const expected = 0x1194;
+
+      it(`should return ${expected}`, function (done) {
+         const crcCheck = crc16(algorithm, check);
+         crcCheck.should.equal(expected);
          done();
       });
-   });
-   describe('Seed', function () {
-      it('should return 0x7D61', function (done) {
-         const crcCheck = crc16('CCITT-FALSE', check.slice(5), crc16('CCITT-FALSE', check.slice(0, 5)));
-         crcCheck.should.equal(0x7D61);
+      it(`should return ${expected} when seeded`, function (done) {
+         const crcCheck = crc16(algorithm, check.slice(5), crc16(algorithm, check.slice(0, 5)));
+         crcCheck.should.equal(expected);
          done();
       });
    });
