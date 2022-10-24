@@ -1,5 +1,6 @@
 // Return values gotten from https://crccalc.com/
 
+import { doesNotMatch } from 'assert';
 import chai from 'chai';
 import { crc32 } from '../index'
 chai.should()
@@ -66,6 +67,13 @@ describe('CRC32', function () {
       it('should return 0x031DB075', function (done) {
          const crcCheck = crc32('XFER', check);
          crcCheck.should.equal(0x031DB075);
+         done();
+      });
+   });
+   describe('Seed', function () {
+      it('should return 0xA684C7C6', function (done) {
+         const crcCheck = crc32('CRC-32', check.slice(5), crc32('CRC-32', check.slice(0, 5)));
+         crcCheck.should.equal(0xA684C7C6);
          done();
       });
    });

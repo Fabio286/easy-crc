@@ -167,4 +167,11 @@ describe('CRC16', function () {
          done();
       });
    });
+   describe('Seed', function () {
+      it('should return 0x7D61', function (done) {
+         const crcCheck = crc16('CCITT-FALSE', check.slice(5), crc16('CCITT-FALSE', check.slice(0, 5)));
+         crcCheck.should.equal(0x7D61);
+         done();
+      });
+   });
 });

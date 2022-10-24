@@ -76,4 +76,11 @@ describe('CRC8', function () {
          done();
       });
    });
+   describe('Seed', function () {
+      it('should return 0x45', function (done) {
+         const crcCheck = crc8('CRC-8', check.slice(5), crc8('CRC-8', check.slice(0, 5)));
+         crcCheck.should.equal(0x45);
+         done();
+      });
+   });
 });
